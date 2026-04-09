@@ -8,7 +8,7 @@ import io
 import os
 
 app = Flask(__name__)
-
+app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
 LANGS = ["DE", "EN", "ES", "IT", "NL", "PT"]
 
 @app.route("/health", methods=["GET"])
